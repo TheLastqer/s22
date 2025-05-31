@@ -1,0 +1,27 @@
+local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
+local Window = Library:NewWindow("Script")
+ 
+local Tab = Window:NewSection("Credits: FxZ Hub")
+
+Tab:CreateToggle("INF MONEY", function(no)
+_G.GetWins = no
+while _G.GetWins== true do
+    wait() 
+
+local args = {
+            [1] = game:GetService("Players").LocalPlayer
+        }
+
+        game:GetService("ReplicatedStorage").Knit.Services.TycoonService.RF.PayIncome:InvokeServer(unpack(args))
+	end
+
+end)
+local Tab = Window:NewSection("Links")
+
+Tab:CreateButton("Discord Group", function()
+print("HI")
+ 
+setclipboard("https://discord.gg/f9CEfBPJ")
+toclipboard("https://discord.gg/f9CEfBPJ")
+ 
+end)
